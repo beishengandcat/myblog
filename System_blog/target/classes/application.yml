@@ -1,0 +1,34 @@
+server:
+  port: 7777
+spring:
+  datasource:
+    url: jdbc:mysql://49.233.39.174:3306/sg_blog?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: Lz123..
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+  redis:
+    database: 0
+    host: 49.233.39.174
+    port: 6379
+    password: Lz123..
+    timeout: 800
+
+mybatis-plus:
+  configuration:
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+
+oss:
+  accessKey: 9UYZCDV5-4PMXQWQN8NoaeNaM2gqFkseNKxEhSGx
+  secretKey: k05JLYrHMTghJANr256P9Q30hBpPNb_lDaRAoLlw
+  bucket: derrick-blog
